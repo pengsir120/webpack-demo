@@ -5,8 +5,8 @@ import './style/style2.less'
 import { sum } from './math'
 
 // // 引入第三方模块
-// import _ from 'lodash'
-// console.log(_.each);
+import _ from 'lodash'
+console.log(_.each);
 
 const sumRes = sum(10, 20)
 console.log('sumRes', sumRes);
@@ -29,5 +29,5 @@ function insertImgElem(imgFile) {
 }
 import imgFile1 from './img/1.jpg'
 insertImgElem(imgFile1)
-import imgFile2 from './img/2.jpeg'
+import imgFile2 from './img/2.png'
 insertImgElem(imgFile2)
