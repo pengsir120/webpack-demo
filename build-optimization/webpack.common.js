@@ -9,12 +9,7 @@ module.exports = {
   },
   module: {
     rules: [
-      {
-        test: /\.js$/,
-        loader: ['babel-loader?cacheDirectory'],
-        include: srcPath,
-        // exclude: /node_modules/
-      }
+      // babel-loader
     ]
   },
   plugins: [

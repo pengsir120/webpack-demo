@@ -5,11 +5,15 @@ import './style/style2.less'
 import { sum } from './math'
 
 // 引入第三方模块
-import _ from 'lodash'
-console.log(_.each);
+// import _ from 'lodash'
+// console.log(_.each);
 
 const sumRes = sum(10, 20)
 console.log('sumRes', sumRes);
+
+import moment from 'moment'
+import 'moment/locale/zh-cn'
+console.log('locale', moment.locale());
 
 // // 开启热更新之后的代码逻辑
 // if(module.hot) {
