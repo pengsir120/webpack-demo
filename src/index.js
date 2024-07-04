@@ -4,9 +4,9 @@ import './style/style2.less'
 
 import { sum } from './math'
 
-// // 引入第三方模块
-// import _ from 'lodash'
-// console.log(_.each);
+// 引入第三方模块
+import _ from 'lodash'
+console.log(_.each);
 
 const sumRes = sum(10, 20)
 console.log('sumRes', sumRes);
@@ -31,3 +31,10 @@ import imgFile1 from './img/1.jpg'
 insertImgElem(imgFile1)
 import imgFile2 from './img/2.png'
 insertImgElem(imgFile2)
+
+// 引入动态数据 - 懒加载
+setTimeout(() => {
+  import('./dynamic-data.js').then(res => {
+    console.log(res.default.message) // 注意这里的 default
+  })
+}, 1500)
