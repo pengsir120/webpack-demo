@@ -42,3 +42,12 @@ setTimeout(() => {
     console.log(res.default.message) // 注意这里的 default
   })
 }, 1500)
+
+
+// 增加，开启热更新之后的代码逻辑
+if (module.hot) {
+  module.hot.accept(['./math'], () => {
+    const sumRes = sum(10, 20)
+    console.log('sumRes in hot', sumRes);
+  })
+}
